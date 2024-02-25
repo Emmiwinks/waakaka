@@ -23,7 +23,50 @@
 
 - MQTT:
   - possible pubsub client: https://github.com/knolleary/pubsubclient/tree/master
-    - how to implement: https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/
+    - how to implement: https://randomnerdtutorial
+
+## MQTT Topics
+
+- waakaka
+  - kalibration
+    - val
+    - set
+  - loadcells
+    - horst
+    - gabi
+    - maik
+    - eowyn
+
+## To - Do
+
+- finding out
+  - how to connect AD converter to ESP32
+  - how to connect the load cells to the AD converter
+  - Is one ESP32 sufficient?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    s.com/esp32-mqtt-publish-subscribe-arduino-ide/
   - broker:
     - https://github.com/eclipse/mosquitto
     - oder einfach via apt package: https://www.elektronik-kompendium.de/sites/raspberry-pi/2709041.htm
