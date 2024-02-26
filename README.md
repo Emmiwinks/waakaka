@@ -25,6 +25,12 @@
   - possible pubsub client: https://github.com/knolleary/pubsubclient/tree/master
     - how to implement: https://randomnerdtutorial
 
+### Hardware Wiring
+
+- connect 4 lead cells with HX711:
+  - https://www.instructables.com/Arduino-Bathroom-Scale-With-50-Kg-Load-Cells-and-H/
+  - possible indications: we might need to build a Wheatstone bridge OR buy a connection helper: https://www.sparkfun.com/products/13878
+
 ## MQTT Topics
 
 - waakaka
@@ -44,7 +50,8 @@
   - how to connect the load cells to the AD converter
   - Is one ESP32 sufficient?
 
-
+## Findings to Discuss
+- load cells will propably give only one value when connected, MQTT Topics shall be reduced to one  (e.g., `waakaka/load`) accordingly
 
 
 
