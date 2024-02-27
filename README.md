@@ -30,6 +30,7 @@
 - connect 4 lead cells with HX711:
   - https://www.instructables.com/Arduino-Bathroom-Scale-With-50-Kg-Load-Cells-and-H/
   - possible indications: we might need to build a Wheatstone bridge OR buy a connection helper: https://www.sparkfun.com/products/13878
+  - for 4, 2 or 1 load cell: https://circuitjournal.com/50kg-load-cells-with-HX711
 
 ## MQTT Topics
 
