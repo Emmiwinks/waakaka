@@ -7,6 +7,14 @@
 
 ## Next Steps
 
+### Homework for 21.03.2024
+
+- Kabelenden desisolieren
+- rote SparkFun - Boards mitbringen
+- (maybe) 1x 10kg - Wägestück mit grünem Kabel
+- (maybe) MQTT calibration factor adjustment
+    - plus / minus settings (or stop calibrating)
+
 ### Homework for 10.03.2024
 
 - find out how to do hardware debugging
@@ -14,6 +22,17 @@
     - do the inputs/outputs work correctly
 
 ## Already accomplished
+
+### 10.03.2024
+
+- verified that HX711 is working properly
+    - voltage between E+/E- is approx. 2.7V
+- soldered connections between ESP32 and HX711
+- learned that Serial connection needs some delay (approx. 2000ms)
+to wake up
+- successfully measured 0kg and verified that measurement reacts
+to cable shaking
+- got to know some nice retrowave tunes
 
 ### 03.03.2024
 
