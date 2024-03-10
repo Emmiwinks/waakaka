@@ -3,6 +3,8 @@
 ## Available Hardware
 
 - ESP WRoom32
+- HX711 ADC
+- Load Cells 50kg
 
 ## Useful Links
 
