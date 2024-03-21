@@ -7,6 +7,14 @@
 
 ## Next Steps
 
+### Homework 04.04.2024
+
+- figure out how to control the pin voltages of the GPIO pins
+    - see, e.g.: https://www.upesy.com/blogs/tutorials/how-to-use-gpio-pins-of-esp32-with-arduino
+- figure out what to expect when connecting the load cell to the HX711 and put
+weight onto it (which values should change, how can we measure it?)
+
+
 ### Homework for 21.03.2024
 
 - Kabelenden desisolieren
