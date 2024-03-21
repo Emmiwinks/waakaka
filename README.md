@@ -54,25 +54,6 @@
 - load cells will propably give only one value when connected, MQTT Topics shall be reduced to one  (e.g., `waakaka/load`) accordingly
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     s.com/esp32-mqtt-publish-subscribe-arduino-ide/
   - broker:
     - https://github.com/eclipse/mosquitto
