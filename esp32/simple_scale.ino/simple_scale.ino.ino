@@ -58,6 +58,7 @@ void setup() {
   scale.set_scale();
   Serial.println("set scale done");
 
+  scale.set_offset(10);
   scale.tare(); //Reset the scale to 0
   Serial.println("tare done");
 
@@ -65,27 +66,37 @@ void setup() {
   long zero_factor = scale.read_average(); //Get a baseline reading
   Serial.print("Zero factor: "); //This can be used to remove the need to tare the scale. Useful in permanent scale projects.
   Serial.println(zero_factor);
+
+  scale.set_gain();
 }
 
 void loop() {
 
 
-  scale.set_scale(calibration_factor); //Adjust to this calibration factor
+  //scale.set_scale(calibration_factor); //Adjust to this calibration factor
 
-  Serial.print("Reading: ");
+  //Serial.print("Reading: ");
   delay(1000);
-  Serial.print(scale.get_units(), 1);
-  Serial.print(" kg"); //Change this to kg and re-adjust the calibration factor if you follow SI units like a sane person
+  //Serial.print(scale.get_units(10), 10);
+  //Serial.print(" kg       "); //Change this to kg and re-adjust the calibration factor if you follow SI units like a sane person
+  //Serial.print(scale.get_value(10));
+  //Serial.print(" value");
   //Serial.print(" calibration_factor: ");
   //Serial.print(calibration_factor);
+  //Serial.println();
+  Serial.print("Wert 1:");
+  Serial.print(analogRead(LOADCELL_DOUT_PIN));
+  Serial.print("       Wert 2:");
+  Serial.print(analogRead(LOADCELL_SCK_PIN));
   Serial.println();
 
-  // if(Serial.available())
-  // {
-  //   char temp = Serial.read();
-  //   if(temp == '+' || temp == 'a')
-  //     calibration_factor += 10;
-  //   else if(temp == '-' || temp == 'z')
-  //     calibration_factor -= 10;
-  // }
+
+   if(Serial.available())
+   {
+     char temp = Serial.read();
+     if(temp == '+' || temp == 'a')
+       calibration_factor += 100;
+     else if(temp == '-' || temp == 'z')
+       calibration_factor -= 100;
+   }
 }
