@@ -100,7 +100,7 @@ If after following these steps you still encounter issues, consider reaching out
 
 1. Connect GND and VCC between ESP32 and HX711, and measure voltage
   a. between VCC and GND of HX711
-  b. between E+/E- and A+/A-, respectively
+  b. between E+/E- and A+/A-, respectively (yep, that should to it, note from S)
 
 2. run program and see what happens, possibly play a little with the
 signal (A+/A-)
@@ -110,3 +110,5 @@ signal (A+/A-)
 10 kg one) for checking
 
 4. try again measuring and see what happens
+
+

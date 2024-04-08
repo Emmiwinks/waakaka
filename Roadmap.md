@@ -7,6 +7,14 @@
 
 ## Next Steps
 
+### Homework 17.04.2024
+
+- Set up concept for/overview of modes/features
+- Create bone structure of code
+- Create MQTT topic tree
+
+## Already accomplished
+
 ### Homework 04.04.2024
 
 - figure out how to control the pin voltages of the GPIO pins
@@ -28,8 +36,6 @@ weight onto it (which values should change, how can we measure it?)
 - find out how to do hardware debugging
     - are connections intact
     - do the inputs/outputs work correctly
-
-## Already accomplished
 
 ### 10.03.2024
 

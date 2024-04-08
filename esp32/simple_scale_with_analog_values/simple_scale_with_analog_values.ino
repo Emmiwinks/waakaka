@@ -31,7 +31,6 @@
 
 */
 
-#include <math.h>
 #include "HX711.h"
 
 #define LOADCELL_DOUT_PIN  16
@@ -39,7 +38,7 @@
 
 HX711 scale;
 
-float calibration_factor = 0; //-7050 worked for my 440lb max scale setup
+float calibration_factor = -3500; //-7050 worked for my 440lb max scale setup
 
 void setup() {
   Serial.begin(115200);
