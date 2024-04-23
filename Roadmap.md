@@ -7,6 +7,14 @@
 
 ## Next Steps
 
+### Tasks for get-together
+- [ ] Validating precision of measurements
+- [ ] define measurement uncertainty - how many values after comma are still valid
+
+### Homewok 
+- Find out if and how you can save parameters on ESP32 to be available after restart
+- 
+
 ### Homework 17.04.2024
 
 - Set up concept for/overview of modes/features

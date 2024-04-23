@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    ports:
+      - "1883:1883"
+    volumes:
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_log:/mosquitto/log
+      - mosquitto_config:/mosquitto/config
+    restart: always
+    networks:
+      custom_network:
+        ipv4_address: 173.20.0.2
+
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    restart: always
+    networks:
+      - custom_network
+
+volumes:
+  mosquitto_config:
+  mosquitto_data:
+  mosquitto_log:
+  grafana_data:
+
+networks:
+  custom_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 173.20.0.0/16
