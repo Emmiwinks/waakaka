@@ -28,9 +28,9 @@
     6. Send this new calibration factor back through MQTT (retained)
     7. Call set_scale() with calibration factor
 
-In general, we should have a piecewise linear function or so, so possibly measure
+(In general, we should have a piecewise linear function or so, so possibly measure
 multiple weights instead of only one to get a calibration over multiple orders
-of magnitude.
+of magnitude.) --> later, for now one-point measurement
 
 ### Calibration factor fine-tuning
 - when a + is sent via a specific topic of MQTT, increase the calibration factor by 10
@@ -46,7 +46,7 @@ of magnitude.
 
 ### Weighting: Default mode
 - Continuosly call function get_units() and send the values via MQTT
-- should loop fast as possible
+- should loop as fast as possible
 - should be default mode if no other mode is set via MQTT
 
 # MQTT Topics
@@ -66,7 +66,24 @@ of magnitude.
             - val
             - set
     - loadcells
-        - eowyn
+        - cell_1
     - confirm
 
 The confirmation topic is used for any kind of confirmation. It only sends "1".
+
+## Further information
+
+"Modes" has the following values:
+- 0: idle
+- 1: weighting (default mode)
+- 2: tare
+- 3: calibration
+
+When 2 or 3 are called and are finished, the system would go back to 1 automatically.
+It will remain in 1, unless the user sets a different mode, or a non-interaction timeout
+is reached, upon which the system goes into 0 and remains there until further
+human interaction.
+
+The calibration factor fine-tuning need not necessarily be a separate mode, because the
+calibration factor can simply be tuned during weighting. Check the efficiency of the
+conditional checks here!
