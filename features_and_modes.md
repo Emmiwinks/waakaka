@@ -66,9 +66,6 @@ of magnitude.
             - val
             - set
     - loadcells
-        - horst
-        - gabi
-        - maik
         - eowyn
     - confirm
 
