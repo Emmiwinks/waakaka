@@ -61,3 +61,14 @@
   - broker:
     - https://github.com/eclipse/mosquitto
     - oder einfach via apt package: https://www.elektronik-kompendium.de/sites/raspberry-pi/2709041.htm
+
+## Known Issues
+
+#### ModuleNotFound
+You may encounter an error like `ModuleNotFoundError: No module named 'serial'`.
+In this case, install _pyserial_ on the system.
+
+#### Device does not exist
+
+If you have an error like "Fatal error: Device /dev/ttyUSB0 does not exist", then
+change access rights: `sudo chmod 666 /dev/ttyUSB0`
